@@ -1,0 +1,23 @@
+{% extends 'content/layot.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block main %}
+	<style type="text/css">
+		p {
+			height: 10px;
+		}
+		.content-sew-sp {
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+	</style>
+	<p></p>
+    {% for el in story %}
+        <div class="content-sew-sp alert alert-success">
+            <h3>{{ el.title }}</h3>
+            <h4>{{ el.autor }}</h4>
+            <a href="{% url 'id_story' el.id %}" class="btn btn-warning">Читать</a>
+        </div>
+    {% endfor %}
+{% endblock %}

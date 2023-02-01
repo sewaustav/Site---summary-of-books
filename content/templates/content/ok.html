@@ -1,0 +1,14 @@
+{% extends 'content/layot.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block main %}
+    <style type="text/css">
+    	.p-sew {
+    		color: black;
+    	}
+    </style>
+    <h4>{{ text1 }}</h4><br>
+    <p class="p-sew">{{ text2 }}</p>
+    <a class="btn btn-success" href="{% url 'all_stories' %}">На главную</a>
+{% endblock %}

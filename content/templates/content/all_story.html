@@ -1,0 +1,38 @@
+{% extends 'content/layot.html' %}
+
+{% block title %}{{ content.title }}{% endblock %}
+
+{% block main %}
+	<style type="text/css">
+		@media (min-width: 751px) {
+			.text-sew {
+				width: calc(100% - 70px);
+				margin-left: 10px;
+				margin-top: 100px;
+
+			}
+			.content-web {
+				position: fixed;
+			}
+			#p {
+				position: absolute;
+			}
+		}
+
+		@media (max-width: 750px) {
+			.content-web {
+				position: absolute;
+				left: 10px;
+				top: 70px;
+			}
+		}
+	</style>
+	<div class="content-web"></div>
+	    <h1>{{ content.title }}</h1>
+	    <h3>{{ content.autor }}</h3>
+		<p id="p">Дата публикации: <br>{{ content.date }}</p>
+	    <div class="text-sew"> 
+	    	<div class="alert alert-success">{{ content.text| linebreaksbr }}</div>
+
+		</div>
+{% endblock %}

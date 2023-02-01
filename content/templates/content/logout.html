@@ -1,0 +1,9 @@
+{% extends 'content/layot.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block main %}
+	<p>Logged out!</p>
+
+    <a class="btn btn-warning" href="{% url 'login'%}">Click here to login again.</a>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'content/layot.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block main %}
+<style type="text/css">
+    form {
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-right: 5px; 
+    }
+    form h2 {
+        margin-bottom: 7px;
+    }
+</style>
+<div class="form">
+    <h2>Добавить пост</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }} <br>
+        {{ form.autor }} <br>
+        {{ form.text }} <br><br>
+        {{ form.date }}<br>
+        <span>{{ error }}</span><br><br>
+        <button class="btn btn-success" type="submit">Создать</button>
+    </form>
+</div>
+{% endblock %}

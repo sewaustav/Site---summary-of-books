@@ -1,0 +1,51 @@
+{% extends 'content/layot.html' %}
+
+{% block title %}Вход{% endblock %}
+{% load crispy_forms_tags %}
+{% block main %}
+        <style>
+            #bot-enter {
+                font-weight:bold;
+            }
+        </style>
+        <p></p>
+        <ul class="navbar-nav mr-auto">
+          {% if user.is_authenticated %}
+
+          <li class="nav-item">
+            <a class="btn btn-warning" class="nav-link" href="{% url 'logout' %}">Logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Welcome, {{user.username}}</a>
+          </li>
+
+          {% else %}
+
+          <li class="nav-item">
+              <div class="content-section">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <fieldset class="form-group">
+                            <legend id="bot-enter" class="border-bottom mb-4">Вход</legend>
+                            {{ form|crispy }}
+                        </fieldset>
+                        <div class="form-group">
+                            <br><button class="btn btn-success" type="submit">Войти</button>
+                        </div>
+                    </form>
+                    <div class="border-top pt-3">
+                        <small class="text-muted">
+                            Нужен аккаунт? <br><a class="btn btn-warning" class="ml-2" href="{% url 'signup' %}">Регистрация</a>
+                        </small>
+                    </div>
+              </div>
+        <h1>{{ title }}</h1>
+          </li>
+
+          {% endif %}
+        </ul>
+
+
+
+
+{% endblock %}

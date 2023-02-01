@@ -1,0 +1,225 @@
+body {
+    font-family: 'tahoma';
+    background-color: aliceblue;
+}
+
+ /* All */
+
+a button img {
+	height: 40px;
+	width: 40px;
+	padding: 5px;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	display: block;
+}
+
+/*header*/
+header {
+    background-color: #282923;
+    height: 50px;
+    display: block;
+}
+
+img {
+	height: 20px;
+	width: 20px;
+} 
+
+#img-home-header {
+	width: 30px;
+	height: 30px;
+	margin-left: 8px;
+	margin-top: 7px;
+}
+
+.img-sew {
+	top: 0;
+	margin-top: 9px;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	background-color: white;
+	border-radius: 6px;
+}
+
+.log-sew {
+	float: left;
+	width: 40px;
+	position: absolute;
+	right: 56px;
+}
+
+.reg-sew {
+	float: left;
+	width: 40px;
+	position: absolute;
+	right: 8px;
+}
+
+.home-button {
+	margin-left: 15px;
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	border-radius: 20px;
+	padding: 2px;
+	float: left;
+}
+
+.search-sew {
+	width: 300px;
+	height: 35px;
+	margin-top: 7px;
+	float: left;
+	border-radius: 3px;
+	border: none;
+	padding-left: 15px; 
+	margin-left: 200px;
+}
+
+.btn-sew {
+	margin-top: 7px;
+	margin-left: 10px;
+	float: left;
+}
+
+input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+/*aside*/
+aside {
+	float: left;
+}
+
+aside ul li {
+	padding: 7px;
+}
+
+#up {
+	padding-top: 25px;
+}
+
+.big-dev {
+	border-right: 5px solid #282923;
+	height: 100vh;
+	width: 250px;
+}
+
+.sub-sew {
+	margin-top: 20px;
+	height: 60px;
+	width: 160px;
+}
+
+/*main*/
+@media (min-width: 750px) {
+	main {
+		position: absolute;
+		left: 260px;
+		top: 60px;
+	}
+}
+
+/* mobil */
+@media (min-width: 750px) {
+	.mobil-menu {
+		display: none;
+	}
+}
+
+@media (max-width: 750px) {
+	aside {
+		display: none;
+	}
+
+	.dev-form {
+		display: none;
+	}
+
+	.home-button {
+		display: none;
+	}
+}
+
+.m-h2 {
+	margin-left: 5px;
+	margin-top: 5px; 
+	background-color: #FFC107;
+	border-radius: 5px;
+	padding: 3px;
+	width: 70px;
+}
+
+.mobile-search {
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 2px;
+}
+
+.mobile-btm-sew {
+	margin-left: 5px;
+}
+
+.mob-ver ul {
+	margin-top: 15px;
+}
+
+.mob-li {
+	padding: 4px;
+}
+
+.mob-btn-sew {
+	margin-top: 7px;
+}
+
+#menu {
+	margin-top: 50px;
+}
+
+/*slideout*/
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  display: none;
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-menu-right {
+  right: 0;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: #FFF; /* A background-color is required */
+  min-height: 100vh;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
