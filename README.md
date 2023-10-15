@@ -1,4 +1,4 @@
-# esse
+# summary of books
 
 if not installed
 $ pip install django
